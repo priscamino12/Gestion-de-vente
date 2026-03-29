@@ -68,7 +68,7 @@ npm install
 
 ### 3. Configuration
 
-Dans le frontend, modifier l’adresse de l’API :
+Dans le frontend, modifier l’adresse de l’API dans /frontend/src/services/api.js:
 ```bash
 baseURL: "http://VOTRE_IP:5000"
 ```
