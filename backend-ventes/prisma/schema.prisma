@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Vente {
+  id          Int      @id @default(autoincrement())
+  numProduit  String
+  design      String
+  prix        Decimal  @db.Decimal(10, 2)
+  quantite    Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
